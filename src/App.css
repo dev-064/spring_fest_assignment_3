@@ -1,38 +1,147 @@
-.App {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: black;
+}
+h1{
   text-align: center;
+  margin: 1em;
+  padding: 0.2em 0;
+}
+#App {
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* first page slider design  */
+.carousel-container img{
+  height: 70vh;
+  width: 100vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* card styling */
+.card{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1em;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: 1em;
+  outline: 1px solid black;
+}
+.card .photo img{
+    height: 200px;
+    width: 200px;
+}
+.card .bookName{
+  text-align: center;
+  margin-top: 1em;
+  color: black;
+}
+
+/* Card container styling */
+
+.parent-card-container{
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* styling search bar  */
+.search-bar{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10000;
+  justify-content: right;
+  position: fixed;
+  right: 0px;
+  padding-top: 0.7em;
+  margin-right: 0.5em;
+  
+}
+.search-section{
+  color: black;
+}
+
+/* genre-card */
+.genre-card{
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  background-color: rgba(228, 228, 228, 0.128);
+  border: 2px solid white;
+}
+.genre-card p{
+  display: flex;
+  border: 0.1px solid white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.144);
+
+}
+.genre-card:hover p{
+    background-color: rgba(0, 0, 0, 0.715);
+    color: white;
+}
+.genre-card:hover {
+  box-shadow: 1px 1px 10px white;
 }
 
-.App-link {
-  color: #61dafb;
+/* genre-distributed-card */
+.genre-distributed-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: white;
+  outline: 1px solid white;
+  text-align: center;
+  height: 450px;
+  width: 200px;
+}
+.genre-distributed-card img{
+  height: 300px;
+  width: 200px;
+}
+.genre-distributed-card:hover{
+  box-shadow: 1px 1px 10px white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom_modal {
+  top: 50%;
+  left: 50%;
+  outline: none;
+  padding: 25px;
+  overflow: auto;
+  position: fixed;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  background: rgb(236, 233, 233);    
+}
+
+.custom_overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;    
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.custom-button{
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
